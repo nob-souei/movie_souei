@@ -1,0 +1,211 @@
+@charset "UTF-8";
+
+/*　共通部分
+----------------------　*/
+html {
+  font-size: 100%;
+}
+body {
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体",
+    "ヒラギノ角ゴ Pro W3", sans-serif;
+  line-height: 1.7;
+  color: rgb(0, 0, 0);
+  background-image: url(../img/Background.jpg);
+  background-repeat: repeat;
+  min-width: 100%;
+  background-size: cover;
+  background-position: center top;
+}
+
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2%;
+  background-color: rgb(255, 255, 255);
+}
+
+/*----------ヘッダー--------*/
+.header {
+  background-color: rgb(0, 136, 66);
+  height: 22px;
+}
+
+/*----------メイン----------*/
+.movie-title {
+  font-size: 2.5rem;
+  color: rgb(0, 136, 66);
+  text-align: center;
+  padding-bottom: 5px;
+  font-weight: 100;
+  background-color: rgb(242, 247, 166);
+  border-bottom: solid 2px rgb(0, 136, 66);
+}
+
+/*----動画コンテンツ----*/
+.plan {
+  display: flex;
+  margin: 20px 0;
+}
+
+.plan-contents {
+  margin: 0 30px;
+  text-align: center;
+}
+
+.plan img {
+  height: 20vh;
+}
+
+.plan-title {
+  font-size: 1.25rem;
+  line-height: 1.3;
+  margin-bottom: 40px;
+}
+
+.sample {
+  font-size: 1.15rem;
+  background-color: rgb(220, 220, 220);
+}
+
+.plan .plan-contents a:visited {
+  color: rgb(0, 0, 0);
+}
+
+.sample:hover {
+  background-color: rgb(0, 136, 66);
+  color: #fff;
+}
+
+.plan-text {
+  text-align: justify;
+  margin-top: 30px;
+}
+
+/*------料金・進め方------*/
+.sub-title {
+  margin-top: 80px;
+  padding: 5px 15px;
+  font-size: 1.5rem;
+  color: rgb(0, 136, 66);
+  font-weight: 100;
+  background-color: rgb(242, 247, 166);
+  border-bottom: solid 2px rgb(0, 136, 66);
+  border-left: solid 10px rgb(0, 136, 66);
+}
+
+.price {
+  font-size: 1.25rem;
+  margin-top: 15px;
+}
+
+.planning {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 40px;
+}
+
+.planning-contents {
+  width: 25%;
+  text-align: center;
+  margin-top: 40px;
+  position: relative;
+}
+
+.planning-contents img {
+  height: 20vh;
+}
+
+.planning-text {
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+.planning-text2 {
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+.planning-text::after {
+  content: url(../img/arrow.svg);
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 100%;
+  transform: translate(-50%, -100%);
+  -webkit-transform: translate(-50%, -100%);
+  -ms-transform: translate(-50%, -100%);
+}
+
+.planning-contents:last-child::after {
+  content: none;
+}
+
+/*--------フッター---------*/
+footer {
+  position: relative;
+}
+.horizon {
+  height: 20px;
+  background-color: rgb(0, 0, 0);
+}
+
+.trapezoid {
+  position: absolute;
+  width: 50%;
+  border-bottom: 20px solid rgb(0, 167, 60);
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+.footer {
+  background-color: rgb(0, 136, 66);
+  color: rgb(220, 220, 220);
+  text-align: center;
+}
+
+.footer-text {
+  padding: 20px 10px 0 10px;
+  font-size: 1.25rem;
+}
+
+.footer-tel {
+  padding: 20px;
+  font-size: 2rem;
+}
+
+/*--------レスポンシブ---------*/
+@media (max-width: 800px) {
+  .movie-title {
+    font-size: 1.75rem;
+  }
+  .plan {
+    flex-direction: column;
+  }
+  .planning {
+    flex-direction: column;
+  }
+  .planning-contents {
+    width: 100%;
+  }
+  .planning-text::after {
+    content: none;
+  }
+  .footer-text {
+    font-size: 1rem;
+  }
+  .footer-tel {
+    font-size: 1.25rem;
+  }
+}
