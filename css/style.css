@@ -31,9 +31,28 @@ img {
 }
 
 /*----------ヘッダー--------*/
-.header {
+/*.header {
   background-color: rgb(0, 136, 66);
   height: 22px;
+}*/
+
+.top-movie {
+  max-width: 100%;
+}
+
+.fv {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%;
+}
+
+.fv video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /*----------メイン----------*/
@@ -45,6 +64,7 @@ img {
   font-weight: 100;
   background-color: rgb(242, 247, 166);
   border-bottom: solid 2px rgb(0, 136, 66);
+  margin-top: 80px;
 }
 
 /*----動画コンテンツ----*/
@@ -62,6 +82,24 @@ img {
   height: 20vh;
 }
 
+/*フェード*/
+.fadeIn_up {
+  opacity: 0;
+  transform: translate(0, 50%);
+  transition: 1s;
+}
+.fadeIn_up.is-show {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.delay-time1 {
+  transition: 2s;
+}
+.delay-time2 {
+  transition: 3s;
+}
+/*フェードここまで*/
+
 .plan-title {
   font-size: 1.25rem;
   line-height: 1.3;
@@ -71,7 +109,17 @@ img {
 .sample {
   font-size: 1.15rem;
   color: rgb(0, 0, 0);
-  background-color: rgb(220, 220, 220);
+  border: solid 1px rgb(0, 136, 66);
+  background: linear-gradient(
+      to right,
+      rgb(0, 136, 66),
+      rgb(0, 136, 66) 50%,
+      transparent 50%,
+      transparent
+    )
+    100% 0 / 200% 100%;
+  cursor: pointer;
+  transition: background-position 0.5s;
 }
 
 .plan .plan-contents a:visited {
@@ -79,7 +127,7 @@ img {
 }
 
 .sample:hover {
-  background-color: rgb(0, 136, 66);
+  background-position: 0 0;
   color: #fff;
 }
 
@@ -122,6 +170,18 @@ img {
 .planning-contents img {
   height: 20vh;
 }
+
+/*フェードイン*/
+.fadeIn_left {
+  opacity: 0;
+  transform: translate(-50%, 0);
+  transition: 2s;
+}
+.fadeIn_left.is-show {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+/*フェードイン*/
 
 .planning-text {
   font-size: 1.25rem;
@@ -182,20 +242,36 @@ footer {
 }
 
 .footer-tel {
-  padding: 20px;
+  padding-top: 20px;
   font-size: 2rem;
+}
+
+.logo img {
+  height: 80px;
+  padding: 20px 0;
 }
 
 /*--------レスポンシブ---------*/
 @media (max-width: 800px) {
   .movie-title {
     font-size: 1.75rem;
+    margin-top: 50px;
   }
   .plan {
     flex-direction: column;
   }
   .planning {
     flex-direction: column;
+  }
+
+  .fadeIn_up {
+    transition: 2s;
+  }
+  .delay-time1 {
+    transition: 2s;
+  }
+  .delay-time2 {
+    transition: 2s;
   }
   .planning-contents {
     width: 100%;
