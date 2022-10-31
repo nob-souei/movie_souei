@@ -9,45 +9,67 @@
     <link href="img/favicon.ico" rel="icon" />
     <!-- CSS -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://unpkg.com/modal-video@2.4.8/css/modal-video.min.css"
+    />
     <link href="css/style.css" rel="stylesheet" />
   </head>
 
   <body>
     <header class="header"></header>
+    <div class="top-movie">
+      <div class="fv">
+        <video src="movie/Web_Top.mp4" muted="" autoplay="" loop=""></video>
+      </div>
+    </div>
     <main class="wrapper">
       <h1 class="movie-title">動画制作もお任せください</h1>
 
       <!--動画コンテンツ-->
       <section class="plan">
         <div class="plan-contents">
-          <img src="img/presentation.svg" alt="プレゼン資料動画" />
+          <img
+            class="inview fadeIn_up"
+            src="img/presentation.svg"
+            alt="プレゼン資料動画"
+          />
           <p class="plan-title">
             プレゼン<br />
             資料動画
           </p>
-          <a href="movie/color rating.mp4"><p class="sample">サンプル</p></a>
+          <a class="movie1" href=""><p class="sample">サンプル</p></a>
           <p class="plan-text">
             社内用・社外用問わず資料動画をお作りいたします。動画にすることでアピールできる幅が広がります。
           </p>
         </div>
         <div class="plan-contents">
-          <img src="img/catalog.svg" alt="カタログコンテンツ動画" />
+          <img
+            class="inview fadeIn_up delay-time1"
+            src="img/catalog.svg"
+            alt="カタログコンテンツ動画"
+          />
           <p class="plan-title">
             カタログ<br />
             コンテンツ動画
           </p>
-          <a href="movie/color rating.mp4"><p class="sample">サンプル</p></a>
+          <a class="movie2" href=""><p class="sample">サンプル</p></a>
           <p class="plan-text">
             アナログのカタログやチラシを動画にすることで、今まで表現できなかったことができるようになります。
           </p>
         </div>
         <div class="plan-contents">
-          <img src="img/telop.svg" alt="テロップ作成" />
+          <img
+            class="inview fadeIn_up delay-time2"
+            src="img/telop.svg"
+            alt="テロップ作成"
+          />
           <p class="plan-title">
             テロップ<br />
             作成
           </p>
-          <a href="movie/color rating.mp4"><p class="sample">サンプル</p></a>
+          <a class="movie3" href=""><p class="sample">サンプル</p></a>
           <p class="plan-text">
             既存の動画にテロップをつけることも可能です。単純なものから動きのあるものまで対応いたします。
           </p>
@@ -62,37 +84,53 @@
       <!----進め方---->
       <section class="planning">
         <div class="planning-contents">
-          <img src="img/meeting.svg" alt="打ち合わせ" />
+          <img
+            class="inview fadeIn_left"
+            src="img/meeting.svg"
+            alt="打ち合わせ"
+          />
           <p class="planning-text">
             ①お打ち合わせ<br />
             <small>（オンラインでOK）</small>
           </p>
         </div>
         <div class="planning-contents">
-          <img src="img/Quote.svg" alt="お見積もり" />
+          <img
+            class="inview fadeIn_left"
+            src="img/Quote.svg"
+            alt="お見積もり"
+          />
           <p class="planning-text">②お見積もり</p>
         </div>
         <div class="planning-contents">
-          <img src="img/Conte.svg" alt="絵コンテ" />
+          <img class="inview fadeIn_left" src="img/Conte.svg" alt="絵コンテ" />
           <p class="planning-text">③絵コンテ</p>
         </div>
         <div class="planning-contents">
-          <img src="img/sample.svg" alt="サンプル作成" />
+          <img
+            class="inview fadeIn_left"
+            src="img/sample.svg"
+            alt="サンプル作成"
+          />
           <p class="planning-text2">④サンプル作成</p>
         </div>
         <div class="planning-contents">
-          <img src="img/Complete.svg" alt="完成" />
+          <img class="inview fadeIn_left" src="img/Complete.svg" alt="完成" />
           <p class="planning-text">⑤完成</p>
         </div>
         <div class="planning-contents">
-          <img src="img/siteup.svg" alt="動画サイトにアップ" />
+          <img
+            class="inview fadeIn_left"
+            src="img/siteup.svg"
+            alt="動画サイトにアップ"
+          />
           <p class="planning-text">
             ⑥動画サイトに<br />
             アップもOK!
           </p>
         </div>
         <div class="planning-contents">
-          <img src="img/effect.svg" alt="効果測定" />
+          <img class="inview fadeIn_left" src="img/effect.svg" alt="効果測定" />
           <p class="planning-text2">
             ⑦効果測定も<br />
             お任せください
@@ -109,7 +147,16 @@
           詳しくはお問い合わせください。
         </p>
         <p class="footer-tel">お問い合わせ番号　050-3784-6405</p>
+        <a class="logo" href="https://www.souei.jp"
+          ><img src="img/soueirogo.svg" alt="ロゴ"
+        /></a>
       </div>
     </footer>
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+    <script src="https://unpkg.com/modal-video@2.4.8/js/jquery-modal-video.min.js"></script>
+    <script src="script/inview_modal.js"></script>
   </body>
 </html>
